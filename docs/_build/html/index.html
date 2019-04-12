@@ -35,7 +35,40 @@
   <div class="section" id="welcome-to-gator-s-documentation">
 <h1>Welcome to gator’s documentation!<a class="headerlink" href="#welcome-to-gator-s-documentation" title="Permalink to this headline">¶</a></h1>
 <p>gator (pronounced “gā-tər”) is a python package which propagates observational uncertainties through linear-algebraic transformations</p>
-<span class="target" id="module-gator.gator"></span><div class="toctree-wrapper compound">
+<span class="target" id="module-gator.gator"></span><dl class="exception">
+<dt id="gator.gator.TransformationError">
+<em class="property">exception </em><code class="descclassname">gator.gator.</code><code class="descname">TransformationError</code><a class="reference internal" href="_modules/gator/gator.html#TransformationError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gator.gator.TransformationError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception denoting an error in linear transformation</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="gator.gator.propagate_varmat">
+<code class="descclassname">gator.gator.</code><code class="descname">propagate_varmat</code><span class="sig-paren">(</span><em>varmat</em>, <em>tmat</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/gator/gator.html#propagate_varmat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#gator.gator.propagate_varmat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Propagate variance-covariance matrix through linear transformation</p>
+<p>Executes pre- and post-multiplication of a variance-covariance
+matrix by a transformation matrix</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>varmat</strong> (<em>array-like</em>) – 2D variance-covariance matrix with <cite>shape</cite> <cite>(n, n)</cite></li>
+<li><strong>tmat</strong> (<em>array-like</em>) – 2D transformation matrix with <cite>shape</cite> <cite>(n, p)</cite>, which transforms
+a vector of <cite>len</cite> <cite>n</cite> to a vector of <cite>len</cite> <cite>p</cite></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>new_varmat</strong> – 2D variance-covariance matrix with <cite>shape</cite> <cite>(p, p)</cite></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">array-like</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="indices-and-tables">

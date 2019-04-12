@@ -13,5 +13,7 @@ setup(
     author_email='zpace@astro.wisc.edu',
     license='MIT',
     packages=['gator'],
-    install_requires=['numpy, sklearn'],
+    install_requires=['numpy', 'sklearn'],
+    test_suite='nose.collector',
+    tests_require=['nose'],
     zip_safe=False)
