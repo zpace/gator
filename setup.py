@@ -6,7 +6,7 @@ def readme():
 
 setup(
     name='gator',
-    version='0.0',
+    version='0.1',
     description='Linear-algebraic uncertainty propagation',
     url='https://github.com/zpace/gator',
     author='Zach Pace',
