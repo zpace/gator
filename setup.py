@@ -9,4 +9,5 @@ setup(
     author_email='zpace@astro.wisc.edu',
     license='MIT',
     packages=['gator'],
+    install_requires=['numpy, sklearn'],
     zip_safe=False)
