@@ -1,9 +1,6 @@
 import numpy as np
 
-class TransformationError(Exception):
-    '''Exception denoting an error in linear transformation
-    '''
-    pass
+from sklearn.datasets import make_spd_matrix
 
 # propagate variance matrix
 def propagate_varmat(varmat, tmat):
@@ -93,4 +90,8 @@ def propagate_varmats(varmats, tmat, axis=-1):
     new_varmats = np.moveaxis(new_varmats, range(num_broadcast_axes), axis)
 
     return new_varmats
-    
+
+class TransformationError(Exception):
+    '''Exception denoting an error in linear transformation
+    '''
+    pass

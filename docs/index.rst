@@ -3,6 +3,34 @@ Welcome to gator's documentation!
 
 gator (pronounced "gā-tər") is a python package which propagates observational uncertainties through linear-algebraic transformations
 
+Installation
+============
+
+`gator` can be `pip` installed!
+
+Example Usage
+=============
+
+.. code-block:: python3
+
+    import numpy as np
+    from sklearn.datasets import make_spd_matrix
+
+    n_orig = 10
+    n_final = 4
+
+    obs = np.random.randn(n_orig)
+    print(obs)
+
+    obs_covar = make_spd_matrix(n_orig)
+    new_param_space_covar = make_spd_matrix(n_orig)
+    evals, evecs = np.linalg.eigh(new_param_space_covar)
+    tfm = evecs[:, ::-1][:, :n_final]
+    obs_tfm = obs @ tfm
+    obs_covar_tfm = propagate_varmat(obs_covar, tfm)
+
+    print(obs_covar_tfm)
+
 .. automodule:: gator.gator
     :members:
 
