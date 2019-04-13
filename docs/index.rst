@@ -31,6 +31,9 @@ Example Usage
 
     print(obs_covar_tfm)
 
+`gator`'s functions
+===================
+
 .. automodule:: gator.gator
     :members:
 
