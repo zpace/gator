@@ -78,3 +78,10 @@ class TestPropagateVarmats(TestPropagateVarmat):
                 varmat_final = gator.propagate_varmats(
                     self.varmat_orig_large[:-1, :-1, ...], self.tmat,
                     axis=self.broadcast_axis)
+
+class TestGenPropagate(TestCase):
+    dim_super = 10
+    dim_orig = 4
+    dim_final = 2
+    K_super = np.eye(dim_super)  # larger covariance
+    tmat = np.ones((dim_orig, dim_final))

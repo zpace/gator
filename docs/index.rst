@@ -31,10 +31,18 @@ Example Usage
 
     print(obs_covar_tfm)
 
-`gator`'s functions
-===================
+`gator` includes tools for propagating uncertainties through linear transformations, and dealing with selecting from high-dimesional covariance matrices
+
+Linear Transformations
+======================
 
 .. automodule:: gator.gator
+    :members:
+
+Covariances
+===========
+
+.. automodule:: gator.cov
     :members:
 
 
