@@ -24,7 +24,7 @@ copyright = '2019, Zach Pace'
 author = 'Zach Pace'
 
 # The short X.Y version
-version = '0.1'
+version = '0.1.1'
 # The full version, including alpha/beta/rc tags
 release = '0.1'
 
